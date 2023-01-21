@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body { 
+      font-family: 'Inter', sans-serif;
+      font-family: 'Lexend Deca', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="w-screen h-screen flex  items-center justify-center bg-main-bg" >
+    <div class="w-52 sm:w-4/6 sm:flex" >
+        <!--session images -->
+      <div class=" sm:w-3/6 sm:rounded-tr-lg sm:rounded-br-lg  sm:rounded-tl-none   sm:h-64 h-40 rounded-tl-lg rounded-tr-lg bg-center bg-cover bg-[url('images/image-header-mobile.jpg')]" >
+        <div class="w-full sm:rounded-tr-lg sm:rounded-br-lg sm:rounded-tl-none  h-full rounded-tl-lg rounded-tr-lg bg-purple-900 opacity-70" >
+
+        </div>
+      </div>
+      
+
+      <!-- session text -->
+      <div class="sm:items-start sm:rounded-tl-lg sm:rounded-bl-lg sm:rounded-br-none lg:pl-8 lg:pr-16 sm:pl-4 sm:pr-8 sm:h-64  sm:order-first sm:w-3/6 rounded-bl-lg rounded-br-lg flex flex-col items-center bg-card-bg p-4" >
+          <!-- session title -->
+          <div class="text-white sm:text-left lg:text-xl text-lg text-center" >
+            Get <span class="text-accent-color" >insights</span> that help your business grow.
+          </div>
+
+          <!-- contenu text -->
+          <p class="block  lg:text-xs sm:text-left text-tiny mt-3 text-main-paragraph text-center"  >
+            Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+            experience, and overall efficiency.
+          </p>
+
+          <div class="sm:flex lg:mt-6 sm:mt-2"  >
+          <p class="block sm:mr-3 sm:text-left mt-3 text-white text-center font-semibold" >
+            10k+ <span class="block text-xs font-thin text-main-paragraph ">companies</span>
+          </p>
+
+          <p class="block sm:mr-3 sm:text-left mt-3 text-white text-center font-semibold" >
+            314 <span class="block text-xs font-thin text-main-paragraph ">templates</span>
+          </p>
+
+          <p class="block sm:mr-3 sm:text-left mt-3 text-white text-center font-semibold" >
+            12M+ <span class="block text-xs font-thin text-main-paragraph ">queries</span>
+          </p>
+          </div>
+
+      </div>
+    </div>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Esdras Koya</a>.
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
