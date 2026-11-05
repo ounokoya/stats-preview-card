@@ -44,7 +44,7 @@ Couleurs, typographie et mesures : `specs/reference/tokens.md` (FM) et la biblio
 | Largeur | Disposition |
 |---|---|
 | < 1024 px (Q-B4, G3-1) | La carte mobile : 327 px au plus et 24 px des bords en dessous, centrée ; photo en haut ; texte centré ; statistiques empilées. |
-| ≥ 1024 px | La carte desktop : 1110 px au plus et 24 px des bords en dessous, centrée ; texte à gauche, photo à droite (deux moitiés) ; statistiques en ligne. |
+| ≥ 1024 px | La carte desktop : 1110 px au plus et 24 px des bords en dessous, centrée ; texte à gauche, photo à droite (570 : 540) ; statistiques en ligne. |
 
 Positions de la maquette, à 1 px près :
 
