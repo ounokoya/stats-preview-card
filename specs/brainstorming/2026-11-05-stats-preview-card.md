@@ -23,3 +23,16 @@ Plan validé (G1, 2026-11-05) au niveau du programme : `frontmentor/specs/plan-r
 ## Analyse (Phase 2)
 
 `specs/visuel/stats-preview-card-analyse.png` (et `.excalidraw`).
+
+## Analyse validée (G2, 2026-11-05)
+
+Koya : « Je valide (G2) » pour le lot 3. Toutes les propositions sont retenues.
+
+| # | Point | Décision |
+|---|---|---|
+| Q-A1 | Attribution sur Navy 950 (lien #3E52A3 2,72:1) | Texte blanc à 75 % (10,98:1), liens Purple 500 (4,89:1), survol sans soulignement |
+| Q-B1 | « 12m+ » (HTML) et « 12M+ » (image) | « 12M+ », comme l'image ; « 10k+ » garde son « k » minuscule |
+| Q-B2 | Photo | Décorative, `alt=""` ; teinte Purple 500 en CSS (fusion multiply) ; image mobile sous 1024 px, desktop au-delà (`picture`) |
+| Q-B3 | Statistiques | Liste de description `dl` : libellé en `dt`, chiffre en `dd` affiché au-dessus ; lu « companies, 10k+ » |
+| Q-B4 | Pas de maquette tablette | Disposition desktop dès 1024 px ; en dessous, la carte mobile de 327 px au plus, centrée |
+| Q-B5 | Refonte | Même dépôt en v2.0.0, GitHub Pages, « Edit solution » |
