@@ -1,1 +1,51 @@
 @import "tailwindcss";
+/* ADR-0004 : Inter 700 et Lexend Deca 400 servies avec le site */
+@import "@fontsource/inter/700";
+@import "@fontsource/lexend-deca/400";
+
+/* ADR-0003 : tokens de la bibliothèque Penpot (specs/visuel/penpot/maquette.md) */
+@theme {
+  --color-*: initial;
+  --color-white: hsl(0, 0%, 100%);
+  --color-navy-950: hsl(233, 47%, 7%);
+  --color-blue-950: hsl(244, 37%, 16%);
+  --color-purple-500: hsl(277, 64%, 61%); /* Q-A1 : aussi les liens de l'attribution, 4,89:1 */
+
+  --font-display: "Inter", sans-serif;
+  --font-sans: "Lexend Deca", sans-serif;
+  --text-title: 2.25rem;
+  --text-title--line-height: 2.75rem;
+  --text-title-mobile: 1.75rem;
+  --text-title-mobile--line-height: 2rem;
+  --text-body: 0.90625rem; /* G3-3 : 14,5 px mesuré sur les images FM */
+  --text-body--line-height: 1.5625rem;
+  --text-stat: 1.5rem;
+  --text-stat--line-height: 1.875rem;
+  --text-label: 0.75rem;
+  --text-label--line-height: 1.5;
+  --text-label--letter-spacing: 0.0625rem;
+  --text-attribution: 0.6875rem;
+  --text-attribution--line-height: 1.5;
+
+  --radius-card: 0.5rem;
+}
+
+/* Q-A1 : liens de l'attribution, soulignés sauf au survol ; contour de focus de 2 px décalé de 2 px */
+@utility link {
+  color: var(--color-purple-500);
+  text-decoration-line: underline;
+  &:hover {
+    text-decoration-line: none;
+  }
+  &:focus-visible {
+    outline: 0.125rem solid var(--color-purple-500);
+    outline-offset: 0.125rem;
+  }
+}
+
+@layer base {
+  body {
+    /* largeurs de lettres non arrondies au pixel : les lignes se coupent comme sur l'image FM */
+    text-rendering: geometricPrecision;
+  }
+}

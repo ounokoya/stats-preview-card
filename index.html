@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Stats preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-  <script type="module" src="/src/main.js"></script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Stats preview card component</title>
+    <script type="module" src="/src/main.js"></script>
   </head>
-<body>
+  <!-- ADR-0006 : 3 rangées, la carte au centre de la fenêtre, le pied de page en bas -->
+  <body class="grid min-h-dvh grid-rows-[1fr_auto_1fr] bg-navy-950 font-sans">
+    <main class="row-start-2">
+      <article class="mx-auto grid w-[min(20.4375rem,100%_-_3rem)] overflow-clip rounded-card bg-blue-950 lg:w-[min(69.375rem,100%_-_3rem)] lg:grid-cols-[57fr_54fr]">
+        <!-- ADR-0005 : photo décorative, teintée par fusion sur Purple 500 (calée en Phase 3) -->
+        <picture class="isolate block bg-purple-500 lg:order-last">
+          <source media="(min-width: 64rem)" srcset="./images/image-header-desktop.jpg" width="540" height="446">
+          <img class="block h-auto w-full object-cover opacity-75 mix-blend-multiply lg:h-full" src="./images/image-header-mobile.jpg" alt="" width="654" height="480">
+        </picture>
 
-  Get insights that help your business grow.
+        <div class="px-8 pt-10 pb-8.75 text-center lg:px-0 lg:ps-18 lg:pt-17.75 lg:pb-15.5 lg:text-start">
+          <h1 class="font-display text-title-mobile font-bold text-white lg:w-96 lg:text-title">Get <span class="text-purple-500">insights</span> that help your business grow.</h1>
+          <p class="mt-3.75 text-body text-white/75 lg:mt-6 lg:w-96">Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
 
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
+          <!-- Q-B3 : libellé puis chiffre à la lecture, chiffre au-dessus à l'écran -->
+          <dl class="mt-10.25 flex flex-col gap-6.75 lg:mt-18.25 lg:flex-row lg:gap-16">
+            <div class="flex flex-col">
+              <dt class="order-2 mt-1.25 text-label text-white/60 uppercase">companies</dt>
+              <dd class="order-1 font-display text-stat font-bold text-white">10k+</dd>
+            </div>
+            <div class="flex flex-col">
+              <dt class="order-2 mt-1.25 text-label text-white/60 uppercase">templates</dt>
+              <dd class="order-1 font-display text-stat font-bold text-white">314</dd>
+            </div>
+            <div class="flex flex-col">
+              <dt class="order-2 mt-1.25 text-label text-white/60 uppercase">queries</dt>
+              <dd class="order-1 font-display text-stat font-bold text-white">12M+</dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+    </main>
 
-  10k+ companies
-  314 templates
-  12m+ queries
-
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
+    <footer class="row-start-3 self-end py-4 text-center text-attribution text-white/75">
+      Challenge by <a class="link" href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a class="link" href="https://www.frontendmentor.io/profile/ounokoya">Koya Esdras</a>.
+    </footer>
+  </body>
 </html>
