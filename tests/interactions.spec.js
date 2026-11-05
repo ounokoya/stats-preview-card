@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test'
-import { open, link, style, cssColor } from './helpers.js'
+import { open, link, style, cssColor, paint } from './helpers.js'
 
 // Spec §5 et §6 — S10 et S11
 
@@ -27,7 +27,7 @@ test('S10 — Tab : les deux liens du pied de page, chacun avec un contour Purpl
 test('S11 — pied de page : texte blanc à 75 %, liens Purple 500 soulignés, sans soulignement au survol ; bonnes adresses', async ({ page }) => {
   await expect(link(page, 'Frontend Mentor')).toHaveAttribute('href', 'https://www.frontendmentor.io?ref=challenge')
   await expect(link(page, 'Koya Esdras')).toHaveAttribute('href', 'https://www.frontendmentor.io/profile/ounokoya')
-  expect(await style(page.getByRole('contentinfo'), 'color'), 'texte').toBe(await cssColor(page, 'hsla(0, 0%, 100%, 0.75)'))
+  expect(await paint(page, await style(page.getByRole('contentinfo'), 'color')), 'texte').toEqual(await paint(page, 'hsla(0, 0%, 100%, 0.75)'))
   const purple = await cssColor(page, PURPLE)
   for (const name of ['Frontend Mentor', 'Koya Esdras']) {
     expect(await style(link(page, name), 'color'), name).toBe(purple)

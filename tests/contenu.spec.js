@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test'
-import { open, card, photo, title, sentence, style, cssColor, STATS } from './helpers.js'
+import { open, card, photo, title, sentence, style, cssColor, paint, STATS } from './helpers.js'
 
 // Spec §2, §3 et §6 — S6 à S9
 
@@ -45,10 +45,10 @@ test('S8 — couleurs : titre et chiffres White, « insights » Purple 500, phra
   const white = await cssColor(page, 'hsl(0, 0%, 100%)')
   expect(await style(title(page), 'color'), 'titre').toBe(white)
   expect(await style(title(page).getByText('insights', { exact: true }), 'color'), 'insights').toBe(await cssColor(page, 'hsl(277, 64%, 61%)'))
-  expect(await style(sentence(page), 'color'), 'phrase').toBe(await cssColor(page, 'hsla(0, 0%, 100%, 0.75)'))
+  expect(await paint(page, await style(sentence(page), 'color')), 'phrase').toEqual(await paint(page, 'hsla(0, 0%, 100%, 0.75)'))
   for (const [t, d] of STATS) {
     expect(await style(card(page).getByRole('definition').filter({ hasText: d }), 'color'), d).toBe(white)
-    expect(await style(card(page).getByRole('term').filter({ hasText: t }), 'color'), t).toBe(await cssColor(page, 'hsla(0, 0%, 100%, 0.6)'))
+    expect(await paint(page, await style(card(page).getByRole('term').filter({ hasText: t }), 'color')), t).toEqual(await paint(page, 'hsla(0, 0%, 100%, 0.6)'))
   }
   expect(await style(card(page), 'backgroundColor'), 'carte').toBe(await cssColor(page, 'hsl(244, 37%, 16%)'))
 })

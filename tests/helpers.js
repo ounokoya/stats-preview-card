@@ -68,3 +68,9 @@ export const cssColor = (page, value) => page.evaluate((v) => {
   const el = document.createElement('span'); el.style.color = v; document.body.append(el)
   const c = getComputedStyle(el).color; el.remove(); return c
 }, value)
+
+// Couleur rendue (r, g, b, a sur 255) : compare deux écritures d'une même couleur (hsl(), rgba(), oklab() de Tailwind)
+export const paint = (page, value) => page.evaluate((v) => {
+  const c = document.createElement('canvas'); c.width = c.height = 1; const g = c.getContext('2d')
+  g.fillStyle = v; g.fillRect(0, 0, 1, 1); return [...g.getImageData(0, 0, 1, 1).data]
+}, value)
