@@ -1,6 +1,6 @@
 # Maquette Penpot — Stats preview card component (refonte v2.0.0)
 
-> SDL-FM 1.5.0 Phase 3 (remise à niveau, étape B, lot 3). Fichier Penpot : « FM Newbie » (créé par Koya ; nom vérifié avant chaque écriture), page « Stats preview ». **En attente de G3.**
+> SDL-FM 1.5.0 Phase 3 (remise à niveau, étape B, lot 3). Fichier Penpot : « FM Newbie » (créé par Koya ; nom vérifié avant chaque écriture), page « Stats preview ». **Validée (G3, 2026-11-05)** avec les propositions : la carte mobile centrée en tablette (G3-1), seuils de 5 % (G3-2), paragraphe de 14,5 px mesuré (G3-3).
 > Décisions G2 appliquées : attribution blanc 75 % et liens Purple 500 (Q-A1), « 12M+ » (Q-B1), photo décorative teintée en CSS (Q-B2), statistiques en `dl` (Q-B3), carte mobile sous 1024 px (Q-B4).
 
 ## Rendu des exports
